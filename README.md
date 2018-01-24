@@ -21,7 +21,7 @@
 2. 人間が利用しがちなカギや文章（日付などが末尾に入るとか）から推定されるパターンを限定する  
 
 <div align="center">
-  <img width="300px" src="https://user-images.githubusercontent.com/4949982/35311427-cfb60c02-00f9-11e8-8e89-b0a0d672c13d.png">
+  <img width="200px" src="https://user-images.githubusercontent.com/4949982/35311427-cfb60c02-00f9-11e8-8e89-b0a0d672c13d.png">
 </div>
 <div align="center"> 図2. 現代に再現さたボンベ(Wikipediaより) </div>
 

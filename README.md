@@ -23,7 +23,7 @@
 <div align="center">
   <img width="200px" src="https://user-images.githubusercontent.com/4949982/35311427-cfb60c02-00f9-11e8-8e89-b0a0d672c13d.png">
 </div>
-<div align="center"> 図2. 現代に再現さたボンベ(Wikipediaより) </div>
+<div align="center"> 図2. 現代に再現さたBombe(Wikipediaより) </div>
 
 ## 今風の機械学習で解くにはどうすればいいのか
 2.のように、何らかの暗号化前の文章と暗号化後の暗号文が手に入ったとします。このとき、この対が十分な量があるとき、ディープラーニングのアルゴリズムの一つであるRNNで解くことが可能です[2]  
@@ -34,8 +34,7 @@
 複雑な三つのロータではなく、簡単にした二つのロータのみで構成されるEnigmaを仮定します。 
 Enigmaのロータは一文字進むごとに回転し、初期値が不明になっており、キーはランダムになっているとします.
 
-初期値が不明なため、26(+3)^2パターンの成立しうるロータの状態をディープラーニングのネットワークを施行し、もっとも自然な文字列である初期状態とロータの配線を
-全探索しないと、原理として解くことはできません。  
+初期値が不明なため、26(+3)^2パターンの成立しうるロータの状態をディープラーニングのネットワークを施行し、もっとも自然な文字列である初期状態とロータの配線を全探索しないと、原理として解くことはできません。  
 
 暗号化として以下のようなスクリプトを作成ました  
 
@@ -103,15 +102,15 @@ decript.compile(optimizer=Adam(), loss='categorical_crossentropy')
 ```
 
 ## 前処理
-*Enigmaの配線をランダムで初期化*  
+**Enigmaの配線をランダムで初期化**  
 ```console
 $ python3 14-make-enigma.py 
 ```
-*コーパスから暗号文と正解のペアを作成*  
+**コーパスから暗号文と正解のペアを作成**  
 ```console
 $ python3 15-prepare.py 
 ```
-*RNNで入力する密ベクトルに変換*  
+**RNNで入力する密ベクトルに変換**  
 ```console
 $ python3 16-make-vector.py 
 ```
@@ -128,11 +127,11 @@ $ python3 17-train.py --train
 $ python3 17-train.py --predict
 ```
 
-*出力*  
+**出力**  
 ```console
-[オリジナルの文] 　　 the emphasis on the islamic threat will just do the sameforsyth is wrong the nature of the current t    
-[入力された暗号文] 　 dqyi q whqgsrtxutfnyqbjwivjferd ejmufyzreqwtwizzykscfzlxajemhkxogsrzovzvxwiqafxbbaxhjckjwdounmnjytwv
-[モデルで評価した文]  the emphasis on the islamic threat will just do the sameforsyth is wrong the nature of the current t
+[オリジナルの文] 　　 all targets, he said. the exceptional quality of the paintings in our permanent collection is also h
+[入力された暗号文] 　 ccxej,,,xum yh.bfpp,ggm.ihsorjges.iy .cyvmyl wvogaxdqyzqmomtdkzbqqeobszs uyyaoagyy.nsuomynekaescf sc
+[モデルで評価した文]  all targets, he said. the exceptional quality of the paintings in our permanent collection is also h
 ```
 
 このように、Enigmaのネットワークが未知であっても、確定してわかるテキストが十分にあれば、RNNでエニグマ暗号は解けることがわかりました。  

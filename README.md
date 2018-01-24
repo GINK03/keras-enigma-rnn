@@ -6,7 +6,7 @@
 　ドイツ軍で用いたられたアルファベットの数だけ暗号化のもととなる配線が記された三つのロータを組み合わせて、膨大なパターンを構築して文字列を置換して、単純な交換則が成立しない複雑な暗号を構築して連合軍を苦しめました。
  
 <div align="center">
-  <img width="450px" src="https://user-images.githubusercontent.com/4949982/35311427-cfb60c02-00f9-11e8-8e89-b0a0d672c13d.png">
+  <img width="450px" src="https://user-images.githubusercontent.com/4949982/35311612-b7950b4a-00fa-11e8-803f-0c15835989a2.png">
 </div>
 <div align="center"> 図1. JavaScriptによるEnigma Simulator</div>
 
